@@ -23,7 +23,7 @@ const ColdEmailNode = ({ id, data }) => {
   const handleBodyChange = (e) => {
     data.onChange(id, {
       ...data,
-      bodyText: e.target.value
+      body: e.target.value
     });
   };
   
@@ -50,7 +50,7 @@ const ColdEmailNode = ({ id, data }) => {
           <textarea
             placeholder="Body"
             className="textarea textarea-bordered textarea-md w-full max-w-xs"
-            value={data.bodyText || ''}
+            value={data.body || ''}
             onChange={handleBodyChange}
           />
         </div>
@@ -181,7 +181,7 @@ const NodeEditor = () => {
         onRemove: removeNode,
         onChange: handleNodeDataChange,
         // Initialize with empty values based on node type
-        ...(type === 'coldEmail' && { subject: '', bodyText: '' }),
+        ...(type === 'coldEmail' && { subject: '', body: '' }),
         ...(type === 'waitDelay' && { delay: '1' }),
         ...(type === 'leadSource' && { source: '' }),
       },
