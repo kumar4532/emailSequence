@@ -1,5 +1,4 @@
 import React from 'react'
-import { IoLogOut } from "react-icons/io5";
 import { useAuthContext } from '../context/AuthContext';
 import toast from 'react-hot-toast';
 
@@ -21,8 +20,8 @@ function Logout() {
     }
 
   return (
-    <div className='cursor-pointer'>
-        <IoLogOut onClick={handleLogout}/>
+    <div className='cursor-pointer flex flex-row'>
+        <span onClick={handleLogout}>Logout</span>
     </div>
   )
 }

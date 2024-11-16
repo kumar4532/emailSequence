@@ -11,6 +11,7 @@ import 'reactflow/dist/style.css';
 import { RxCross2 } from 'react-icons/rx';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import Logout from './Logout';
 
 const ColdEmailNode = ({ id, data }) => {
   const handleSubjectChange = (e) => {
@@ -262,6 +263,9 @@ const NodeEditor = () => {
         </button>
         <button className='btn' onClick={saveFlow}>
           Save Flow
+        </button>
+        <button className='btn'>
+          <Logout />
         </button>
       </div>
     </div>

@@ -22,8 +22,7 @@
   1. bcryptjs: For hashing passwords.
   2. dotenv: For environment variable management.
   3. cookie-parser: For handling cookies.
-  4. react-icons: For icons.
-  5. react-hot-toast: For pop-ups.
+  4. react-hot-toast: For pop-ups.
 
 ## Project Setup
 
