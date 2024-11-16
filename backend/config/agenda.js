@@ -14,7 +14,12 @@ const transporter = nodemailer.createTransport({
 agenda.define('send email', async (job) => {
     const { to, subject, body } = job.attrs.data;
     try {
-        await transporter.sendMail({ from: process.env.EMAIL_USER, to, subject, body });
+        await transporter.sendMail({ 
+            from: process.env.EMAIL_USER, 
+            to, 
+            subject, 
+            text: body 
+        });
         console.log(`Email sent to ${to}`);
     } catch (error) {
         console.error('Error sending email:', error);
